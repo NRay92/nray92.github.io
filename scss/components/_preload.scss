@@ -1,0 +1,101 @@
+.preload{
+  position: relative;
+}
+
+.preload-svg--fill{
+  position: absolute;
+  left: 0;
+}
+
+
+.preload-path{
+  display: block;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 20s linear forwards;
+}
+@keyframes dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.preload-path--gas{
+  animation-duration: 50s;
+}
+.preload-path--s{
+  animation-duration: 8s;
+}
+.preload-path--a{
+  animation-duration: 29s;
+}
+.preload-path--g{
+  animation-duration: 32s;
+}
+.preload-path--g2{
+  animation-duration: 75s;
+}
+.preload-path--s2{
+  animation-duration: 75s;
+}
+.preload-path--a2{
+  animation-duration: 110s;
+}
+
+
+.page-preload{
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  position: fixed;
+  will-change: transform;
+
+  animation: hide linear;
+  animation-iteration-count: 1;
+  animation-delay: 6s;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+
+}
+@keyframes hide {
+  0%{  visibility: visible;
+    opacity: 1;
+    z-index: 99;
+  }
+  100%{
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+  }
+}
+.preload{
+  display: inline-block;
+  overflow: hidden;
+  height: 200px;
+}
+.preload-svg{
+  z-index: 1;
+  position: absolute;
+  left: 0;
+}
+
+.preload-svg--back{
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 100%;
+  height: 100%;
+  animation: height linear;
+  animation-iteration-count: 1;
+  animation-delay: 2s;
+  animation-fill-mode: both;
+  animation-duration: 10s;
+}
+@keyframes height {
+  0%{margin-top: 0}
+  100%{margin-top: 500px}
+}

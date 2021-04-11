@@ -1,0 +1,34 @@
+.a-modal__message
+  .contacts__title Оставьте свои контакты
+  .contacts__description И мы вам перезвоним или напишем
+  form.a-form#sendMailForm
+    .a-form__tabs
+      .a-form__tab.active(data-for="phone") Телефон
+      .a-form__tab(data-for="telegram") Telegram
+      .a-form__tab(data-for="whatsapp") WatsApp
+      .a-form__tab(data-for="email") E-mail
+    .a-form__fields
+      input.a-form__input.active#phone(type="tel" placeholder="+7 (_ _ _) _ _ _ - _ _ _ _")
+      input.a-form__input#telegram(type="text" placeholder="@username")
+      input.a-form__input#whatsapp(type="tel" placeholder="+7 (_ _ _) _ _ _ - _ _ _ _")
+      input.a-form__input#email(type="email" placeholder="E-mail")
+    .a-form__message
+      textarea.a-form__textarea(placeholder="Сообщение" rows="1")
+    .a-form__file
+      label.upload(for='custom-file-upload')
+        span.upload-file-name.js-value Прикрепить документ
+        input#custom-file-upload(type='file' name='attachment-file' value='1')
+
+    .a-form__button
+      //input.a-form__submit(type="submit" value="Отправить")
+      .a-form__submit#sendMailFormButton Отправить
+//-.a-modal__message
+  p.js-modal-text Оставьте контакт, мы с вами свяжемся
+//-form.form#sendMailForm(method='POST')
+  .form__field
+    input.form__input.js-modal-field(type='tel' name='phone' required placeholder="+7 000 000-00-00")
+  .form__button
+    button.button.button--form#sendMailFormButton
+      span.button__text Отправить
+      span.button__icon
+        img(src="image/icon/icon-form-button.svg")

@@ -1,0 +1,118 @@
+// component .directions
+.directions {
+  margin-top: 20px;
+  display: flex;
+  width: 100%;
+  @media(max-width: 1024px){
+    flex-wrap: wrap;
+    background: $blue-dark-2;
+  }
+}
+
+.directions__block {
+  overflow: hidden;
+  background: $blue-dark-2;
+  border-right: 1px solid darken($blue-dark-2, 3%);
+  padding: 20px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  transition: all $time;
+  min-height: 135px;
+
+  @media(min-width: 1366px){
+    flex: 0 0 calc(100%/7);
+    max-width: calc(100%/7);
+  }
+  @media(min-width: 1025px){
+    flex: 0 0 calc(100%/6);
+    max-width: calc(100%/6);
+  }
+  @media(min-width: 320px){
+    flex: 0 0 calc(100%/3);
+    max-width: calc(100%/3);
+  }
+
+
+  @media(max-width: 567px){
+    //padding: 16px;
+    padding: 10px 7px 16px;
+    min-height: 105px;
+    &:nth-child(1),
+    &:nth-child(4){
+      padding-left: 16px;
+    }
+  }
+
+
+}
+
+.directions__block:hover,
+.directions__block.active {
+  cursor: pointer;
+  background: $primary-light-hover;
+  border-right-color: $primary-light-hover;
+
+  .directions__name {
+    color: $primary-text;
+  }
+
+  .directions__svg {
+    path,
+    rect,
+    line {
+      stroke: $primary-text;
+    }
+
+    circle {
+      fill: $primary-text;
+    }
+  }
+
+  .directions__svg--fill {
+    path {
+      stroke: transparent;
+      fill: $primary-text;
+    }
+  }
+}
+
+.directions__name {
+  margin-top: 6px;
+  color: $primary-light-text;
+  max-width: 120px;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+  @media(max-width: 567px){
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
+.directions__icon {
+  display: inline-flex;
+  height: 48px;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.directions__svg {
+  path,
+  rect,
+  line {
+    stroke: $primary-light-text;
+  }
+
+  circle {
+    fill: $primary-light-text;
+  }
+}
+
+.directions__svg--fill {
+  path {
+    stroke: transparent;
+    fill: $primary-light-text;
+  }
+}

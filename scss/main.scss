@@ -1,0 +1,50 @@
+/* assets*/
+
+@import "~slick-carousel/slick/slick.scss";
+//@import "~slick-carousel/slick/slick-theme.scss";
+@import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+@import "~malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css";
+
+/* base */
+@import "variables";
+@import "base";
+@import "fonts";
+@import "typography";
+
+/* components */
+
+@import "components/preload";
+@import "components/header";
+@import "components/footer";
+@import "components/button";
+//@import "components/grid";
+//@import "components/css-grid";
+@import "components/n-grid";
+@import "components/a-arrow";
+@import "components/a-nav";
+@import "components/a-modal";
+@import "components/a-form";
+@import "components/p-grid";
+@import "components/sections";
+@import "components/directions";
+@import "components/products";
+@import "components/slider-news";
+@import "components/contacts";
+@import "components/a-tabs";
+@import "components/a-certs";
+@import "components/a-docs";
+@import "components/a-lightbox";
+@import "components/a-table";
+@import "components/catalog-link";
+@import "components/page-nav";
+
+
+/* pages */
+
+@import "pages/page-main";
+@import "pages/page-inner";
+@import "pages/page-about";
+@import "pages/page-news";
+@import "pages/page-partners";
+@import "pages/page-product";
+@import "pages/page-catalog";

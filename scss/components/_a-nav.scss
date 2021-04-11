@@ -1,0 +1,220 @@
+
+/* nav */
+.a-nav__toggle {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 10px 0;
+  &:hover{
+    cursor: pointer;
+  }
+}
+
+.a-nav__toggle-item {
+  width: 45px;
+  height: 2px;
+  margin-bottom: 9px;
+  background: $header-blue;
+  display: inline-flex;
+
+  &:nth-child(2) {
+    width: 33px;
+  }
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.a-nav-close {
+  width: 50px;
+  height: 50px;
+  background: url("/img/icons/icon-close.svg") no-repeat center center;
+  //background-size: cover;
+  //background-color: pink;
+  overflow: hidden;
+  cursor: pointer;
+  position: absolute;
+  top: 27px;
+  right: 27px;
+  @media(min-width: $wide-screen) {
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+  }
+  @media(max-width: $tablet - 1){
+    width: 33px;
+    height: 33px;
+    top: 25px;
+    right: 30px;
+  }
+}
+
+.a-nav__menu{
+  padding: 44px 68px 40px;
+  overflow-y: auto;
+  flex: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  //padding-bottom: 40px;
+
+
+  @media(max-width: $tablet - 1) and (orientation: landscape){
+    //padding: 7vh 68px 0;
+  }
+
+  //@media(max-height: 779px) and (orientation: landscape) {
+  @media(max-width: $tablet-sm - 1) and (orientation: landscape) {
+    column-count: 2;
+    display: block;
+  }
+
+  @media(max-height: 600px) and (orientation: portrait){
+    column-count: auto;
+  }
+  @media(max-width: $mobile-sm){
+    padding: 29px 50px 40px;
+  }
+}
+
+
+.a-nav{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100vw/8*4);
+  height: calc(100vh);
+  background-color: $blue-dark-2;
+  z-index: 9999;
+  transition: right $time;
+  opacity: 1;
+
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @media (max-width: $laptop-sm) {
+    //width: calc(100vw/7*3);
+    width: 50vw;
+  }
+  @media (max-width: $tablet + 1) {
+    width: calc(100vw/6*3);
+  }
+  @media (max-width: $tablet-sm + 1) {
+    width: 100%;
+  }
+  @media (max-width: 359px) {
+    //width: 270px;
+  }
+
+  hr{
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    margin-bottom: 53px;
+  }
+}
+
+.hide .a-nav{
+  -webkit-animation: 3s ease 0s normal forwards 1 fadeout;
+  animation: 3s ease 0s normal forwards 1 fadeout;
+  opacity: 0;
+  position: fixed;
+  right: calc(-100vw/8*4);
+  transition: right $time;
+  @media (max-width: $laptop-sm) {
+    //right: calc(-100vw/7*3);
+    right: -50vw;
+  }
+  @media (max-width: $tablet + 1) {
+    right: calc(-100vw/6*3);
+  }
+  //@media (max-width: $mobile-sm + 1) {
+  @media (max-width: $tablet-sm + 1) {
+    right: -100%;
+  }
+}
+@keyframes fadeout{
+  0% { opacity:1; }
+  66% { opacity:0; }
+  100% { opacity:0; }
+}
+@-webkit-keyframes fadeout{
+  0% { opacity:1; }
+  66% { opacity:0; }
+  100% { opacity:0; }
+}
+
+.a-nav__item {
+  //margin-bottom: 42px;
+  margin-bottom: 4vh;
+
+  @media(max-height: 870px) and (orientation: landscape)  {
+    margin-bottom: 3vh;
+  }
+
+  @media(max-width: $tablet)  {
+    margin-bottom: 40px;
+  }
+  @media(max-width: $tablet - 1) and (orientation: landscape) {
+    margin-bottom: 5vh;
+  }
+  @media(max-width: $tablet - 1) and (max-height: 359px) {
+    margin-bottom: 10px;
+  }
+  @media(max-width: $mobile-sm + 1) {
+    margin-bottom: 3.8vh;
+  }
+
+  &:last-of-type{
+    margin-bottom: 0!important;
+  }
+  &.active .a-nav__link{
+    color: #83A6DF;
+    font-weight: bold;
+    &:hover {
+      color: $white;
+    }
+  }
+
+}
+
+.a-nav__link {
+  //color: $white;
+  //min-height: 43px;
+  //white-space: nowrap;
+  transition: all $time;
+  //font-size: 28px;
+  //line-height: 32px;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 40px;
+  //line-height: 286%;
+  color: #83A6DF;
+  padding: 10px 0;
+
+  &:hover {
+    color: $white;
+  }
+
+  @media(min-width: $wide-screen) {
+    font-size: 1.4vw;
+    line-height: normal;
+  }
+
+  @media(max-height: 870px) and (orientation: landscape)  {
+    font-size: 4vh;
+    line-height: normal;
+  }
+  @media(max-width: $mobile-sm) {
+    font-size: 4vh;
+    line-height: normal;
+  }
+
+  @media(max-width: 567px) {
+    font-size: 24px;
+    line-height: 28px
+  }
+}

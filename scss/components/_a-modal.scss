@@ -1,0 +1,139 @@
+[class*='js-btn-open-modal'] {
+  cursor: pointer;
+  user-select: none;
+}
+
+.a-modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all $time;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+
+  &.hide {
+    display: none;
+  }
+}
+
+.a-modal-wrapper--top {
+  align-items: flex-start;
+  padding-top: 10vh;
+}
+
+.a-modal {
+  padding: 28px 33px;
+  margin: 20px;
+  position: relative;
+  width: 480px;
+  //height: 250px;
+  background: $blue-dark-2;
+  box-shadow: 0 4px 34px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @media(min-width: $wide-screen) {
+    width: 35vw;
+    height: 16vw;
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  @media(max-width: $tablet - 1) {
+    width: 90vw;
+    height: auto;
+    padding: 40px;
+  }
+
+  @media(max-width: $mobile-sm) {
+    padding: 50px 28px;
+  }
+
+}
+
+.a-modal__button-close {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  width: 40px;
+  height: 40px;
+  //background-color: #F1F5F8;
+
+  border: none;
+  //border: 1px solid black;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity $time;
+  img{
+    display: block;
+    //width: 32px;
+    //height: 32px;
+    max-width: 100%;
+  }
+  &:hover{
+    opacity: .7;
+  }
+}
+
+.a-modal__message {
+  //background-color: goldenrod;
+
+  .contacts__title,
+  .a-form__input,
+  .a-form__input::placeholder {
+    color: $white;
+  }
+
+  .contacts__description{
+    color: #B7C3E1;
+  }
+
+  .a-form__tab{
+    color: #AADBFF;
+    &.active:after{
+      background: $white;
+    }
+  }
+
+  .a-form__input{
+    border-color: $white;
+  }
+
+  .a-form__button .a-form__submit {
+    background: $white;
+    color: $header-blue;
+    font-weight: 500;
+    font-size: 16px;
+    &:hover{
+      background-color: rgba(255,255,255,.8);
+    }
+  }
+
+  .a-form__textarea{
+    border-bottom: 1px solid #FFFFFF;
+    color: $white;
+    &::placeholder {
+      color: $white;
+    }
+  }
+
+  .a-form__file{
+    color: #AADBFF;
+  }
+  .a-form__file .upload-file-name{
+    border-bottom: 1px dashed #AADBFF;
+  }
+  .a-form__file .upload:before{
+    background: url("/img/icons/icon-file.svg") no-repeat center center;
+  }
+
+}

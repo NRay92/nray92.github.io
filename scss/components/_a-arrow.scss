@@ -1,0 +1,45 @@
+.a-arrow{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border: 2px solid $blue-light-hover;
+  transition: border-color $time;
+  user-select: none;
+  img{
+    opacity: .3;
+    transition: opacity $time;
+  }
+  &:hover,
+  &.active {
+    border-color: $header-blue;
+    z-index: 1;
+    cursor: pointer;
+    img{
+      opacity: 1;
+    }
+  }
+}
+.a-arrow--top{
+  img{
+    transform: rotate(-90deg);
+  }
+}
+.a-arrow--left{
+  img{
+    transform: rotate(-180deg);
+  }
+}
+.a-arrow--right{
+  margin-left: -2px;
+}
+
+.a-arrow--grey{
+  background: #F4F6F8;
+  border: none;
+  opacity: 1;
+  img{
+    opacity: 1;
+  }
+}

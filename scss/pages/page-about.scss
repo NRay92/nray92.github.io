@@ -1,0 +1,51 @@
+.page-about,
+.page-partners,
+.page-inner-template {
+
+  .page-head{
+    height: 230px;
+    @media(max-width: $mobile-sm - 1)  {
+      height: 15vh;
+    }
+  }
+  .page-img img{
+    object-fit: contain;
+    object-position: right;
+  }
+
+  .page-name{
+    font-size: 60px;
+    line-height: 110%;
+    padding-bottom: 40px;
+    @media(max-width: $mobile)  {
+      font-size: 4vw;
+      line-height: normal;
+      padding-bottom: 0;
+    }
+
+    @media(max-width: $mobile-sm - 1)  {
+      font-size: 22px;
+      line-height: 21px;
+    }
+  }
+
+  .page-content{
+    margin-top: 50px;
+    p{
+      margin-top: 0;
+      font-size: 16px;
+      line-height: 150%;
+      color: #4A5566;
+      font-family: $main-font;
+    }
+  }
+}
+
+
+.double-col--count{
+  column-count: 2;
+  column-gap: 76px;
+  @media(max-width: $mobile-sm - 1)  {
+    column-count: 1;
+  }
+}

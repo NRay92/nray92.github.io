@@ -1,0 +1,60 @@
+// colors
+$white: #ffffff;
+$black: #000000;
+
+
+$gray: #CECECE;
+$gray-dark: #525252;
+$blue: #1A70EA;
+$blue-text: #0066FF;
+$blue-dark: #11448C;
+$blue-dark-2: #3455A2;
+$blue-light-hover: #CADEFF;
+$blue-light-text: #9CC2FF;
+
+
+$primary: $blue;
+$primary-text: $blue-text;
+$primary-dark: $blue-dark;
+$primary-light-hover: $blue-light-hover;
+$primary-light-text: $blue-light-text;
+
+$header-blue: #2C7DEF;
+$bg-color: $white;
+$bg-color-gray: #F2F2F2;
+$bg-color-text: #F1F1F1;
+$border-color: $gray;
+$text: #737373;
+$text-gray: #868686;
+$text-dark: $gray-dark;
+$text-black: #2F343A;
+
+
+// fonts
+$main-font: 'Montserrat', sans-serif;
+$base-font: 'HelveticaNeueCyr', sans-serif;
+
+$font-bold: 700;
+$font-semibold: 600;
+$font-medium: 500;
+$font-normal: 400;
+
+/* breakpoints */
+$laptop: 1440px;
+$laptop-sm: 1365px;
+$laptopSm: 1365px;
+$tablet: 1024px;
+$tablet-sm: 768px;
+$mobile: 720px;
+$mobile-sm: 567px;
+$mobile-xs: 479px;
+//
+//$mobile-sm: 567px;
+//$mobile: 720px;
+//$tablet-sm: 768px;
+//$tablet: 1024px;
+//$laptop: 1440px;
+$wide-screen: 1921px;
+
+// other
+$time: .2s;

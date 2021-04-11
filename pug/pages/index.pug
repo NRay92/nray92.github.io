@@ -1,0 +1,237 @@
+extends ../layout/base
+
+block content
+  include ../pages/preload
+  include ../parts/header
+
+  .page.page--main
+    .main__nav
+      include ../parts/page-nav
+    #fullpage
+      .section.section--1(data-anchor='start')
+        //- для фона
+        .n-grid-row.n-grid--abs
+          .n-grid-col.n-grid-col-xl-3.n-grid-col-md-3.n-grid-col-xs-2
+          .n-grid-col.n-grid-col-xl-5.n-grid-col-md-4.bg--colored
+        .page-main.main
+          .n-grid-row
+            .n-grid-col.n-grid-col-xl-1.n-grid-col-md-1
+            .n-grid-col.n-grid-col-xl-7.n-grid-col-md-6.n-grid-col-xs-6
+              .page-title
+                .page-title__count 01
+                .page-title__name Главная
+          .n-grid-row(style="min-height: 52vh")
+            .n-grid-col-xl-1.n-grid-col-md-1
+            .n-grid-col.flex-col
+              div
+                .section1
+                  .section__title Эффективные системы распределения СПГ — наш конек
+                  .section__subtitle Например, автоматические газораспределительные станции «Исток»
+              div
+                //-.section1
+                  .section__nav
+                    .section__nav-title А еще мы занимаемся:
+                .section1
+                  //- include ../parts/directions-old
+                  include ../parts/directions
+        .n-grid-row
+          .scroll
+            //img(src="img/icons/icon-scroll.svg" alt="Scroll icon")
+            svg(width='21' height='55' viewbox='0 0 21 55' fill='none' xmlns='http://www.w3.org/2000/svg')
+              rect(x='1.33154' y='0.511475' width='18.767' height='32.1235' rx='9.38352' stroke='#E1E1E1')
+              rect(x='7.35425' y='5.55859' width='6.28928' height='9.99405' rx='3.14464' stroke='#E1E1E1')
+              line(x1='10.5601' y1='0.0114746' x2='10.5601' y2='5.76431' stroke='#E1E1E1')
+              line(x1='10.5601' y1='15.27' x2='10.5601' y2='19.1788' stroke='#E1E1E1')
+              path(d='M9.7065 53.9707C9.90177 54.1659 10.2183 54.1659 10.4136 53.9707L13.5956 50.7887C13.7909 50.5934 13.7909 50.2768 13.5956 50.0816C13.4003 49.8863 13.0837 49.8863 12.8885 50.0816L10.0601 52.91L7.23163 50.0816C7.03637 49.8863 6.71979 49.8863 6.52452 50.0816C6.32926 50.2768 6.32926 50.5934 6.52452 50.7887L9.7065 53.9707ZM9.56006 39.6125L9.56006 53.6171L10.5601 53.6171L10.5601 39.6125L9.56006 39.6125Z' fill='#E1E1E1')
+
+      .section.section--2(data-anchor='products')
+        .page-main.main
+          .n-grid-row
+            .n-grid-col.n-grid-col-xl-1.n-grid-col-md-1
+            .n-grid-col.n-grid-col-xl-7.n-grid-col-md-6.n-grid-col-xs-6
+              .page-title
+                .page-title__count 02
+                .page-title__name Продукция
+          .n-grid-row
+            .n-grid-row-container
+              .products
+                .products__block
+                  a.product(href="/catalog-gas.html")
+                    .product__name Газовое оборудование
+                    .product__icon.product__icon--gas
+                      img(src="img/product/product-gas.svg")
+                .products__block
+                  a.product(href="/catalog-oil.html")
+                    .product__name Нефтяное оборудование
+                    .product__icon.product__icon--oil
+                      img(src="img/product/product-oil.svg")
+                  a.product(href="/catalog-ks.html")
+                    .product__name Оборудование для КС
+                    .product__icon.product__icon--ks
+                      img(src="img/product/product-ks.svg")
+                .products__block
+                  a.product(href="/catalog-energy.html")
+                    .product__name Энергетическое оборудов-е
+                    .product__icon.product__icon--energy
+                      img(src="img/product/product-energy.svg")
+                  a.product(href="/catalog-spg.html")
+                    .product__name Оборудование СПГ
+                    .product__icon.product__icon--spg
+                      img(src="img/product/product-spg.svg")
+
+      .section.section--3(data-anchor='news')
+        .main
+          .n-grid-row
+            .n-grid-col.n-grid-col-xl-1.n-grid-col-md-1
+            .n-grid-col.n-grid-col-xl-7.n-grid-col-md-6.n-grid-col-xs-6
+              .page-title
+                .page-title__count 03
+                .page-title__name Новости
+          .n-grid-row
+            .n-grid-row-container(style="padding-right: 0; margin-right: -12vw")
+              .slider-news-arrows
+                .a-arrow.a-arrow--left.slider-news-arrow__prev
+                  img(src="img/icons/icon-slider-arrow.svg" alt="")
+                .a-arrow.a-arrow--right.active.slider-news-arrow__next
+                  img(src="img/icons/icon-slider-arrow.svg" alt="")
+              .slider-news
+                .slide-news
+                  a.news-card(href="/news.html")
+                    .news-card__date
+                      .news-card__day
+                        .dot-number 23
+                      div
+                        .news-card__month СЕН
+                        .news-card__year 2020
+                    .news-card__img
+                      //img(src="img/news/news-1.png")
+                      img(src="img/uploads/news-real.jpg" alt="")
+                    .news-card__title 01-04 октября 2019 г. Участие в Международном газовом форуме (г.Санкт-Петербург)
+                    .news-card__description С 01 по 04 октября 2019 года в Санкт-Петербурге проходил Международный газовый форум...
+
+                .slide-news
+                  a.news-card(href="/news.html")
+                    .news-card__date
+                      .news-card__day
+                        .dot-number 21
+                      div
+                        .news-card__month СЕН
+                        .news-card__year 2020
+                    .news-card__img
+                      img(src="img/news/news-1.png")
+                    .news-card__title 2020: АГРС-НП «ИСТОК» на соискание премии ПАО «Газпром»
+                    .news-card__description С 01 по 04 октября 2019 года в Санкт-Петербурге проходил Международный газовый форум...
+
+                .slide-news
+                  a.news-card(href="/news.html")
+                    .news-card__date
+                      .news-card__day
+                        .dot-number 20
+                      div
+                        .news-card__month СЕН
+                        .news-card__year 2020
+                    .news-card__img
+                      img(src="img/news/news-1.png")
+                    .news-card__title 22 — 26 октября 2018 г. Участие в Х Международной научно-практической конференции «Газораспределительные станции и системы газоснабжения»
+                    .news-card__description С 01 по 04 октября 2019 года в Санкт-Петербурге проходил Международный газовый форум...
+
+                .slide-news
+                  a.news-card(href="/news.html")
+                    .news-card__date
+                      .news-card__day
+                        .dot-number 18
+                      div
+                        .news-card__month СЕН
+                        .news-card__year 2020
+                    .news-card__img
+                      img(src="img/news/news-1.png")
+                    .news-card__title Автоматические газораспределительные станции «Исток»
+                    .news-card__description С 01 по 04 октября 2019 года в Санкт-Петербурге проходил Международный газовый форум...
+                .slide-news
+                  a.news-card(href="/news.html")
+                    .news-card__date
+                      .news-card__day
+                        .dot-number 20
+                      div
+                        .news-card__month СЕН
+                        .news-card__year 2020
+                    .news-card__img
+                      img(src="img/news/news-1.png")
+                    .news-card__title 22 — 26 октября 2018 г. Участие в Х Международной научно-практической конференции «Газораспределительные станции и системы газоснабжения»
+                    .news-card__description С 01 по 04 октября 2019 года в Санкт-Петербурге проходил Международный газовый форум...
+                //.slide-news 6
+      .section.section--4(data-anchor='contacts')
+        .main
+          .n-grid-row
+            .n-grid-col.n-grid-col-xl-1.n-grid-col-md-1
+            .n-grid-col.n-grid-col-xl-7.n-grid-col-md-6.n-grid-col-xs-6
+              .page-title
+                .page-title__count 04
+                .page-title__name Контакты
+          .n-grid-row.contacts
+            .n-grid-col-xl-1.n-grid-col-md-1
+            .n-grid-col-xl-3.n-grid-col-md-3.n-grid-col-xs-6
+              .contacts__block.contacts-info
+                .contacts__title Адрес
+                .contacts-address
+                  .address
+                    .address__col
+                      .address__block
+                        .address__title Юридический адрес
+                        .address__text 420088, Республика Татарстан, г. Казань, ул. Журналистов д.54, оф.303
+                      .address__block
+                        .address__title Фактический адрес
+                        .address__text 420036, г. Казань, ул.Тэцевская, д.1а
+                      .address__block
+                        .address__title Почтовый адрес
+                        .address__text 420033, г.Казань, а/я 83
+                    .address__col
+                      .address__block
+                        .address__title Телефоны
+                        .address__text
+                          a(href="tel:+78432115338") (843) 211-53-38,
+                          a(href="tel:+78432115336") 211-53-36,
+                          a(href="tel:+78432115322") 211-53-22
+                      .address__block
+                        .address__title Факс
+                        .address__text (843) 570-70-82
+                      .address__block
+                        .address__title E-mail
+                        .address__text
+                          a(href="mailto:aviagaz@agrs.ru") aviagaz@agrs.ru
+
+                .contacts-form
+                  .contacts__title Оставьте свои контакты
+                  .contacts__description И мы вам перезвоним или напишем
+                  form.a-form
+                    .a-form__tabs
+                      .a-form__tab.active(data-for="contact-phone") Телефон
+                      .a-form__tab(data-for="contact-telegram") Telegram
+                      .a-form__tab(data-for="contact-whatsapp") WatsApp
+                      .a-form__tab(data-for="contact-email") E-mail
+                    .a-form__fields
+                      input.a-form__input.active#contact-phone(type="tel" placeholder="+7 (_ _ _) _ _ _ - _ _ _ _")
+                      input.a-form__input#contact-telegram(type="text" placeholder="@username")
+                      input.a-form__input#contact-whatsapp(type="text" placeholder="+7 (_ _ _) _ _ _ - _ _ _ _")
+                      input.a-form__input#contact-email(type="email" placeholder="E-mail")
+                    .a-form__message
+                      textarea.a-form__textarea(placeholder="Сообщение" rows="1")
+                    .a-form__file
+                      label.upload(for='contact-custom-file-upload')
+                        span.upload-file-name.js-value Прикрепить документ
+                        input#contact-custom-file-upload(type='file' name='attachment-file' value='1')
+                    .a-form__button
+                      input.a-form__submit(type="submit" value="Отправить")
+
+            .n-grid-col-xl-4.n-grid-col-md-3.n-grid-col-xs-6
+              .contacts__block.contacts-map
+                img(src="img/sections/map.PNG" alt="map")
+          .contacts-arrow
+            a(href='#start').a-arrow.a-arrow--top
+              img(src="img/icons/icon-slider-arrow.svg" alt="")
+
+    include ../parts/grid-fixed
+
+block custom-scripts
+  //script(src='js/script-mainpage.js')
+  //script(src='js/nav.js')

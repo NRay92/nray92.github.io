@@ -1,0 +1,139 @@
+/* global */
+
+html,
+body {
+  width: 100%;
+  min-height: 100vh;
+}
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  background: $bg-color;
+  font-family: $base-font;
+  color: $text;
+  overflow-x: hidden;
+}
+
+.page,
+.header-main {
+  * {
+    box-sizing: border-box;
+
+    &:before,
+    &:after {
+      clear: both;
+    }
+  }
+
+  a {
+    text-decoration: none;
+
+    &:focus,
+    &:active {
+      outline: none;
+    }
+  }
+
+  ul li {
+    list-style: none;
+  }
+
+  img {
+    display: block;
+  }
+
+  button {
+    font: inherit;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+
+  input {
+    appearance: none;
+    -wekit-appearance: none;
+  }
+
+  main {
+    min-height: 100vh;
+  }
+
+  .flex {
+    display: flex;
+  }
+
+
+  .p-right {
+    padding-right: calc(100vw / 8);
+    @media(max-width: $laptop-sm) {
+      padding-right: calc(100vw / 7);
+    }
+    @media(max-width: $tablet) {
+      padding-right: 0 !important;
+    }
+  }
+
+  .p-left {
+    padding-left: calc(100vw / 8 - 2px);
+    @media(max-width: $laptop-sm) {
+      padding-left: calc(100vw / 7 - 2px);
+    }
+    @media(max-width: $tablet) {
+      padding-left: 25px !important;
+    }
+  }
+
+  .slick-slide:focus {
+    outline: none;
+  }
+
+  /* fancybox */
+  .fancybox-close-small {
+    right: 16px;
+    top: 18px;
+    width: 46px;
+    height: 46px;
+    background: $header-blue;
+    border-radius: 100%;
+    //opacity: 1;
+    color: $white;
+    transition: opacity $time;
+  }
+
+  .fancybox-bg {
+    background: none;
+  }
+
+  .fancybox-content {
+    filter: drop-shadow(0px 4px 79px rgba(0, 0, 0, 0.25));
+  }
+
+  /* .mCS-dark.mCSB_scrollTools .mCSB_draggerRail */
+  .mCSB_draggerRail {
+    display: none;
+  }
+
+  .mCSB_inside > .mCSB_container {
+    margin-right: 0;
+  }
+
+  .mCS-dark.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+    background-color: $border-color;
+  }
+
+  .mCSB_dragger:hover {
+
+  }
+
+  .mCS-dark.mCSB_scrollTools .mCSB_dragger:hover .mCSB_dragger_bar {
+    background-color: darken($border-color, 5%);
+  }
+
+  .mCS-dark.mCSB_scrollTools .mCSB_dragger.mCSB_dragger_onDrag .mCSB_dragger_bar,
+  .mCS-dark.mCSB_scrollTools .mCSB_dragger:active .mCSB_dragger_bar {
+    background-color: darken($border-color, 10%);
+  }
+}

@@ -1,0 +1,143 @@
+extends ../layout/base
+
+block content
+    include ../parts/header
+
+    .page.page--main.page--catalog
+        .main__nav
+            include ../parts/page-nav
+        .main
+            .n-grid-row
+                .n-grid-row-container.n-grid-row-container--0
+                    .page-title
+                        .page-title__count 02
+                        .page-title__name
+                            a(href="/#products") Продукция
+                            span Газовое оборудование
+            .n-grid-row
+                .n-grid-row-container
+                    .scroll
+                        img(src="img/icons/icon-scroll.svg" alt="Scroll icon")
+                        //-svg(width='21' height='55' viewbox='0 0 21 55' fill='none' xmlns='http://www.w3.org/2000/svg')
+                          rect(x='1.33154' y='0.511475' width='18.767' height='32.1235' rx='9.38352' stroke='#E1E1E1')
+                          rect(x='7.35425' y='5.55859' width='6.28928' height='9.99405' rx='3.14464' stroke='#E1E1E1')
+                          line(x1='10.5601' y1='0.0114746' x2='10.5601' y2='5.76431' stroke='#E1E1E1')
+                          line(x1='10.5601' y1='15.27' x2='10.5601' y2='19.1788' stroke='#E1E1E1')
+                          path(d='M9.7065 53.9707C9.90177 54.1659 10.2183 54.1659 10.4136 53.9707L13.5956 50.7887C13.7909 50.5934 13.7909 50.2768 13.5956 50.0816C13.4003 49.8863 13.0837 49.8863 12.8885 50.0816L10.0601 52.91L7.23163 50.0816C7.03637 49.8863 6.71979 49.8863 6.52452 50.0816C6.32926 50.2768 6.32926 50.5934 6.52452 50.7887L9.7065 53.9707ZM9.56006 39.6125L9.56006 53.6171L10.5601 53.6171L10.5601 39.6125L9.56006 39.6125Z' fill='#E1E1E1')
+                    .no-scrollable-wrapper1
+                        .no-scrollable1
+                            .p-grid.p-grid--main
+                                .p-grid__col
+                                    .p-grid__block
+                                        .prod-card__wrapper
+                                            .prod-card
+                                                a(href="/product.html").prod-card__img
+                                                    img(src="img/uploads/gas-1.png" alt="Product picture")
+                                                    .prod-card__info
+                                                        .prod-card__name АГРС «Исток» от 75 нм3/час
+                                                        .prod-card__desc (КИПиА, щитовая, мастерская, узел подготовки теплоносителя, бытовая)
+                                                .prod-card__name АГРС «Исток» от 75 нм3/час
+                                .p-grid__area
+                                    .p-grid__row
+                                        .p-grid__block
+                                            .prod-card__wrapper.hover
+                                                .prod-card
+                                                    a(href="/product.html").prod-card__img
+                                                        img(src="img/uploads/gas-2.png" alt="Product picture")
+                                                        .prod-card__info
+                                                            .prod-card__name АГРC «Исток»
+                                                            .prod-card__desc (КИПиА, щитовая, мастерская, узел подготовки теплоносителя, бытовая)
+                                                    .prod-card__name АГРC «Исток»
+
+                                        .p-grid__block
+                                            .prod-card__wrapper
+                                                .prod-card
+                                                    a(href="/product.html").prod-card__img
+                                                        img(src="img/uploads/gas-1.png" alt="Product picture")
+                                                        .prod-card__info
+                                                            .prod-card__name АГРС-НП «Исток»
+                                                            .prod-card__desc (КИПиА, щитовая, мастерская, узел подготовки теплоносителя, бытовая)
+                                                    .prod-card__name АГРС-НП «Исток»
+
+                                    .p-grid__row
+                                        .p-grid__block
+                                            .prod-card__wrapper
+                                                .prod-card
+                                                    a(href="/product.html").prod-card__img
+                                                        img(src="img/uploads/gas-4.png" alt="Product picture")
+                                                        .prod-card__info
+                                                            .prod-card__name Блок азотных баллонов
+                                                            .prod-card__desc (КИПиА, щитовая, мастерская, узел подготовки теплоносителя, бытовая)
+                                                    .prod-card__name Блок азотных баллонов
+                                        .p-grid__block
+                                            .prod-card__wrapper
+                                                .prod-card
+                                                    a(href="/product.html").prod-card__img
+                                                        img(src="img/uploads/gas-3.png" alt="Product picture")
+                                                        .prod-card__info
+                                                            .prod-card__name АГРС-НП «Исток»
+                                                            .prod-card__desc (КИПиА, щитовая, мастерская, узел подготовки теплоносителя, бытовая)
+                                                    .prod-card__name Блок вспомогательных помещений
+                            .p-grid
+                                .p-grid__block
+                                    .prod-card__wrapper.hover
+                                        .prod-card
+                                            a(href="/product.html").prod-card__img
+                                                img(src="img/uploads/gas-2.png" alt="Product picture")
+                                                .prod-card__info
+                                                    .prod-card__name АГРC «Исток»
+                                                    .prod-card__desc (КИПиА, щитовая, мастерская, узел подготовки теплоносителя, бытовая)
+                                            .prod-card__name АГРC «Исток»
+
+                                .p-grid__block
+                                    .prod-card__wrapper
+                                        .prod-card
+                                            a(href="/product.html").prod-card__img
+                                                img(src="img/uploads/gas-1.png" alt="Product picture")
+                                                .prod-card__info
+                                                    .prod-card__name АГРС-НП «Исток»
+                                                    .prod-card__desc (КИПиА, щитовая, мастерская, узел подготовки теплоносителя, бытовая)
+                                            .prod-card__name АГРС-НП «Исток»
+                                .p-grid__block
+                                    .prod-card__wrapper
+                                        .prod-card
+                                            a(href="/product.html").prod-card__img
+                                                img(src="img/uploads/gas-4.png" alt="Product picture")
+                                                .prod-card__info
+                                                    .prod-card__name Блок азотных баллонов
+                                                    .prod-card__desc (КИПиА, щитовая, мастерская, узел подготовки теплоносителя, бытовая)
+                                            .prod-card__name Блок азотных баллонов
+                                .p-grid__block
+                                    .prod-card__wrapper
+                                        .prod-card
+                                            a(href="/product.html").prod-card__img
+                                                img(src="img/uploads/gas-3.png" alt="Product picture")
+                                                .prod-card__info
+                                                    .prod-card__name АГРС-НП «Исток»
+                                                    .prod-card__desc (КИПиА, щитовая, мастерская, узел подготовки теплоносителя, бытовая)
+                                            .prod-card__name Блок вспомогательных помещений
+                                .p-grid__block
+                                    .prod-card__wrapper
+                                        .prod-card
+                                            a(href="/product.html").prod-card__img
+                                                img(src="img/uploads/gas-4.png" alt="Product picture")
+                                                .prod-card__info
+                                                    .prod-card__name Блок азотных баллонов
+                                                    .prod-card__desc (КИПиА, щитовая, мастерская, узел подготовки теплоносителя, бытовая)
+                                            .prod-card__name Блок азотных баллонов
+                                .p-grid__block
+                                    .prod-card__wrapper
+                                        .prod-card
+                                            a(href="/product.html").prod-card__img
+                                                img(src="img/uploads/gas-3.png" alt="Product picture")
+                                                .prod-card__info
+                                                    .prod-card__name АГРС-НП «Исток»
+                                                    .prod-card__desc (КИПиА, щитовая, мастерская, узел подготовки теплоносителя, бытовая)
+                                            .prod-card__name Блок вспомогательных помещений
+
+                    include ../parts/catalog-link
+        include ../parts/grid-fixed
+
+block custom-scripts
+    //script(src='js/script-mainpage.js')
+    //script(src='js/nav.js')

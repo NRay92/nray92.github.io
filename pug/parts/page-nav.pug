@@ -1,0 +1,55 @@
+//-ul.page-nav
+    li.page-nav__item
+        a(href="#").page-nav__link Компания
+    li.page-nav__item
+        a(href="#").page-nav__link Продукция
+    li.page-nav__item
+        a(href="#").page-nav__link Новости
+    li.page-nav__item
+        a(href="#").page-nav__link Контакты
+//-ul.page-nav#menu
+    li.page-nav__item(data-menuanchor="start")
+        a(href="/#start").page-nav__link Компания
+    li.page-nav__item(data-menuanchor="block2")
+        a(href="/#block2").page-nav__link Продукция
+    li.page-nav__item.page-nav__item--subnav(data-menuanchor="block2_1")
+        a(href="/#block2_1").page-nav__link Газовое
+    li.page-nav__item.page-nav__item--subnav(data-menuanchor="block2_2")
+        a(href="/#block2_2").page-nav__link Нефтяное
+        //ul.page-nav.page-subnav
+            //li.page-nav__item(data-menuanchor="block2_1")
+                a(href="#block2_1").page-nav__link Газовое
+            li.page-nav__item
+                a(href="#").page-nav__link Нефтяное
+            li.page-nav__item
+                a(href="#").page-nav__link Энергетическое
+            li.page-nav__item
+                a(href="#").page-nav__link Lля КС
+            li.page-nav__item
+                a(href="#").page-nav__link СПГ
+
+    li.page-nav__item(data-menuanchor="news")
+        a(href="/#news").page-nav__link Новости
+    li.page-nav__item(data-menuanchor="contacts")
+        a(href="/#contacts").page-nav__link Контакты
+ul.page-nav#menu
+    li.page-nav__item(data-menuanchor="start")
+        a(href="/#start").page-nav__link Компания
+    li.page-nav__item(data-menuanchor="products")
+        a(href="/#products").page-nav__link Продукция
+        ul.page-nav.page-subnav
+            li.page-nav__item
+                a(href="/catalog-gas.html").page-nav__link Газовое
+            li.page-nav__item
+                a(href="/catalog-oil.html").page-nav__link Нефтяное
+            li.page-nav__item
+                a(href="/catalog-energy.html").page-nav__link Энергетическое
+            li.page-nav__item
+                a(href="/catalog-ks.html").page-nav__link Для КС
+            li.page-nav__item
+                a(href="/catalog-spg.html").page-nav__link СПГ
+
+    li.page-nav__item(data-menuanchor="news")
+        a(href="/#news").page-nav__link Новости
+    li.page-nav__item(data-menuanchor="contacts")
+        a(href="/#contacts").page-nav__link Контакты

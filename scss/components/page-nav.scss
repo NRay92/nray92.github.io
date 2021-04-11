@@ -1,0 +1,122 @@
+// to component
+.page-nav {
+  //transition: all $time;
+  //position: absolute;
+  //width: 100%;
+  padding-left: 40px;
+  padding-right: 10px;
+  @media(max-width: 1365px)  {
+    //padding-left: 2vw;
+    //padding-right: 1vw;
+  }
+  margin: 0;
+  @media (max-width: 1024px){
+    display: none;
+  }
+}
+.page-nav__link {
+  //display: block;
+  padding: 4px 0;
+  color: #A6ADB7;
+
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 286%;
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  &:hover{
+    color: #475364;
+  }
+
+}
+.page-nav__item{
+  transition: all $time;
+}
+
+.page-nav__item.active .page-subnav{
+  //position: relative;
+  //visibility: visible;
+  opacity: 1;
+  height: 190px;
+  transition: height $time, opacity $time;
+}
+.page-nav__item.active .page-nav__link{
+  font-weight: bold;
+  color: #475364;
+  &:before{
+    content: '';
+    background-color: $blue-text;
+    width: 30px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    left: -40px;
+  }
+}
+
+.page-nav__item.active .page-subnav .page-nav__link{
+  font-weight: normal;
+  color: #A6ADB7;
+  &:hover{
+    color: #475364;
+  }
+  &.active{
+    color: #475364;
+    font-weight: bold;
+  }
+}
+
+.page-subnav {
+  //position: absolute;
+  overflow: hidden;
+  //visibility: hidden;
+  opacity: 0;
+  height: 0;
+  transition: height $time, opacity $time;
+  //display: none;
+  //position: relative;
+  padding-left: 16px;
+  //margin-bottom: 20px;
+  @media(max-width: 1365px)  {
+    padding-left: 0;
+  }
+  .page-nav__link {
+    padding: 10px 0;
+    font-size: 12px;
+    line-height: 14px;
+    //color: #11448C;
+    //opacity: 0.5;
+    letter-spacing: 0.05em;
+    //font-family: $base-font;
+  }
+  .page-nav__link:before{
+    display: none!important;
+  }
+}
+
+.page-nav__item--subnav{
+  padding-left: 16px;
+  @media(max-width: 1365px)  {
+    padding-left: 0;
+  }
+
+
+  .page-nav__link {
+    padding: 10px 0;
+    font-size: 12px;
+    line-height: 14px;
+    //color: #11448C;
+    //opacity: 0.5;
+    letter-spacing: 0.05em;
+    //font-family: $base-font;
+  }
+
+  &.active{
+    .page-nav__link:before{
+      display: none;
+    }
+  }
+}

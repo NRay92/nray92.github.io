@@ -1,0 +1,65 @@
+header.header-main
+  .header__wrapper
+    .header
+      //.nav-toggle
+        img.nav-toggle__img(src="img/nav-toggle.svg" alt="Nav icon")
+      .header__block
+        .logo
+          a.logo__link(href="/")
+            img.logo__img(src="img/logo/logo.png" alt="Logo")
+            img.logo__img(src="img/logo/logoavia.png" alt="Logo")
+      .flex
+        .header__block.mob-hide
+          form.search
+            input.search__field(type="text" placeholder="Поиск")
+            span.search__button
+        .header__block
+          a.phone(href="tel:8 800 900 0000") 8 800 900 0000
+        .header__block.mob-hide
+          .button.js-btn-open-modal-head Перезвоните мне
+        .header__block
+          //.nav
+            .nav__wrapper
+              .nav__item
+                a.nav__link(href="#") Home
+              .nav__item
+                a.nav__link.nav__link--active(href="#") Explore
+              .nav__item
+                a.nav__link(href="#") My Campaigns
+          .a-nav__toggle.js-btn-open-burger-menu
+            span.a-nav__toggle-item
+            span.a-nav__toggle-item
+          .js-burger-menu.hide
+            .a-nav
+              .a-nav-close.js-btn-close-burger-menu
+              .a-nav__menu#menu1
+                .a-nav__item.active(data-menuanchor="start")
+                  a.a-nav__link(href="/#start") Компания
+                .a-nav__item(data-menuanchor="services")
+                  a.a-nav__link(href="/#products") Оборудование
+                .a-nav__item(data-menuanchor="projects")
+                  a.a-nav__link(href="/#news") Новости
+                .a-nav__item(data-menuanchor="about")
+                  a.a-nav__link(href="/#contacts") Контакты
+                .a-nav__item(data-menuanchor="partners")
+                  a.a-nav__link(href="/partners.html") Наши партнеры
+                .a-nav__item(data-menuanchor="news")
+                  a.a-nav__link(href="/about.html") О предприятии
+                .a-nav__item(data-menuanchor="news")
+                  a.a-nav__link(href="/questionnaires.html") Опросные листы
+                .a-nav__item(data-menuanchor="news")
+                  a.a-nav__link(href="/certificates.html") Сертификаты и разрешения
+                .a-nav__item(data-menuanchor="news")
+                  a.a-nav__link(href="/inner.html") Отзывы
+                .a-nav__item(data-menuanchor="news")
+                  a.a-nav__link(href="/inner.html") География поставок
+                //.a-nav__item(data-menuanchor="contact")
+                //  a.a-nav__link(href="#") Вакансии
+                //.a-nav__item(data-menuanchor="contact")
+                //  a.a-nav__link(href="#") Мобильная версия
+
+.a-modal-wrapper.js-modal-wrapper.hide
+  .a-modal.js-modal.hide
+    .a-modal__button-close.js-btn-close-modal
+      img(src="img/icons/icon-close.svg" alt="")
+    include ../parts/modal

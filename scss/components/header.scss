@@ -1,0 +1,142 @@
+/* header */
+/* header */
+
+.header-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.header,
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media(max-width: $tablet)  {
+    align-items: flex-end;
+  }
+}
+.header {
+  width: 100%;
+}
+
+.header {
+  height: 100px;
+  @media(max-width: 1024px)  {
+    height: 50px;
+  }
+}
+
+.header__wrapper {
+  height: 100%;
+  padding: 0 60px 0 44px;
+  @media(max-width: 1024px){
+    padding: 0 22px;
+  }
+}
+
+.header__block {
+  display: flex;
+  align-items: center;
+}
+.mob-hide{
+  @media(max-width: 767px) {
+    display: none;
+  }
+}
+
+.header__block .button{
+  margin-right: 43px;
+}
+
+  /* logo */
+
+.logo {
+  margin-right: 8px;
+}
+.logo__link{
+  display: block;
+  @media(max-width: 1024px)  {
+    width: 50px;
+  }
+}
+.logo__img{
+  max-width: 100%;
+}
+
+/* phone */
+.phone{
+  display: flex;
+  align-items: center;
+  color: $primary-dark;
+  font-size: 16px;
+  line-height: 16px;
+  margin-right: 26px;
+
+  &:before{
+    content: '';
+    width: 12px;
+    height: 16px;
+    display: block;
+    //background: url("../img/icons/icon-phone.svg") no-repeat center center;
+    background: url("/img/icons/icon-phone.svg") no-repeat center center;
+    background-size: contain;
+    margin-right: 5px;
+  }
+}
+
+/* search */
+.search {
+  position: relative;
+  background: transparent;
+  height: 38px;
+  display: flex;
+  justify-content: flex-end;
+  border-radius: 3px;
+  margin-right: 22px;
+  width: 36px;
+  overflow: hidden;
+  transition: width .3s, background-color .3s;
+  &:hover{
+    width: 395px;
+    background: #E1E7EC;
+    @media(max-width: $tablet)  {
+      width: 250px;
+    }
+  }
+
+
+}
+
+.search__field {
+  background: transparent;
+  border-radius: 3px 0 0 3px;
+  border: 1px solid transparent;
+  padding: 11px 12px;
+  flex: 1;
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 100%;
+  width: 100%;
+
+  &::placeholder{  color: #4A5566;}
+
+  &:focus{
+    outline: none;
+  }
+}
+
+.search__button {
+  flex-shrink: 0;
+  margin: 0 6px;
+  display: flex;
+  width: 22px;
+  background: url("/img/icons/icon-search.svg") no-repeat center center;
+  &:hover{
+    cursor: pointer;
+  }
+}

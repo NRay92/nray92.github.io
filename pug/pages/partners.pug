@@ -1,0 +1,69 @@
+extends ../layout/base
+
+block content
+    include ../parts/header
+
+    .page.page-inner.page-partners
+        .main__nav
+            include ../parts/page-nav
+        .page-container
+            .section.section--equipment
+                .main
+                    .n-grid-row
+                        .n-grid-row-container.n-grid-row-container--0
+                            .page-title
+                                .page-title__count 05
+                                .page-title__name
+                                    a(href="/") Главная
+                                    span Партнеры
+                    div
+                        .n-grid-row-container.n-grid-row-container--0
+                            .n-grid-row
+                                .page-head
+                                    .page-inner-title
+                                        .page-name Партнеры
+                                    .page-img
+                                        img(src="img/partners.png" alt="")
+                        .n-grid-row-container
+                            .partners
+                                a(href="#").partners__block
+                                    .partners__img
+                                        img(src="img/uploads/partner-1.png" alt="")
+                                a(href="#").partners__block
+                                    .partners__img
+                                        img(src="img/uploads/partner-2.png" alt="")
+                                a(href="#").partners__block
+                                    .partners__img
+                                        img(src="img/uploads/partner-3.png" alt="")
+                                a(href="#").partners__block
+                                    .partners__img
+                                        img(src="img/uploads/partner-4.png" alt="")
+                                a(href="#").partners__block
+                                    .partners__img
+                                        img(src="img/uploads/partner-5.png" alt="")
+                                a(href="#").partners__block
+                                    .partners__img
+                                        img(src="img/uploads/partner-6.png" alt="")
+                                a(href="#").partners__block
+                                    .partners__img
+                                        img(src="img/uploads/partner-7.png" alt="")
+                                a(href="#").partners__block
+                                    .partners__img
+                                        img(src="img/uploads/partner-8.png" alt="")
+                                a(href="#").partners__block
+                                    .partners__img
+                                        img(src="img/uploads/partner-9.png" alt="")
+                                a(href="#").partners__block
+                                    .partners__img
+                                        img(src="img/uploads/partner-1.png" alt="")
+                                a(href="#").partners__block
+                                    .partners__img
+                                        img(src="img/uploads/partner-5.png" alt="")
+                                a(href="#").partners__block
+                                    .partners__img
+                                        img(src="img/uploads/partner-1.png" alt="")
+        include ../parts/grid-fixed
+
+block custom-scripts
+    //script(src='js/script-mainpage.js')
+    //script(src='js/nav.js')

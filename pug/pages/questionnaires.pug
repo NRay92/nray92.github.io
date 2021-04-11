@@ -1,0 +1,38 @@
+extends ../layout/base
+
+block content
+    include ../parts/header
+
+    .page.page-inner.page-inner-template
+        .main__nav
+            include ../parts/page-nav
+        .page-container
+            .section.section--equipment
+                .main
+                    .n-grid-row
+                        .n-grid-row-container.n-grid-row-container--0
+                            .page-title
+                                .page-title__count 10
+                                .page-title__name
+                                    a(href="/") Главная
+                                    span Опросные листы
+                    div
+                        .n-grid-row-container.n-grid-row-container--0
+                            .n-grid-row
+                                .page-head
+                                    .page-inner-title
+                                        .page-name Опросные листы
+                                    .page-img
+                                        img(src="img/about.png" alt="")
+                        .n-grid-row-container
+                            .n-grid-row
+                                .page-content-wrapper
+                                    //.page-content
+                                        p ООО «НПП «Авиагаз-Союз+» специализируется на разработке и изготовлении параметрического ряда автоматических и автоматизированных газораспределительных станций АГРС «Исток» в блочном и блочно-контейнерном исполнении, регуляторов давления газа «ЛОРД» различного назначения (отсекатели, ограничители) и другого газотехнологического оборудования, в том числе блоков очистки газа «Исток» и фильтров очистки газа ФВД, теплообменников ТКТ-У, подогревателей газа прямого действия ПГТА и с промежуточным теплоносителем, блоков одоризации и дезодорации, ёмкостей сбора конденсата и хранения одоранта и др., а также источников бесперебойного питания ИБП, системы управления САУ «Исток-СМ» и блочно-модульных котельных БМК.
+                                    include ../parts/a-docs
+
+        include ../parts/grid-fixed
+
+block custom-scripts
+    //script(src='js/script-mainpage.js')
+    //script(src='js/nav.js')
