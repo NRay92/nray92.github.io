@@ -39,9 +39,16 @@ export const cutLongText = () => {
    * **/
 
   // заголовки новостей на главной
-  cutLongTextFunc(75, $('.newscard'), '.newscard__title');
-  cutLongTextFunc(92, $('.newscard'), '.newscard__description');
+  setTimeout(function () {
+    cutLongTextFunc(85, $('.slick-slide .news-card'), '.news-card__description');
+    cutLongTextFunc(137, $('.slick-slide .news-card'), '.news-card__title');
+    cutLongTextFunc(80, $('.slick-current .news-card'), '.news-card__title');
+  },100)
+
 
   // описание проектов на главной
-  cutLongTextFunc(84, $('.products__slide'), '.card__description');
+  // cutLongTextFunc(84, $('.products__slide'), '.card__description');
+
+  // заголовки новостей на странице архива
+  cutLongTextFunc(122, $('.arch-grid .news-card'), '.news-card__title');
 };

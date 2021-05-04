@@ -223,7 +223,7 @@ $(document).ready(function () {
         arrows: true,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 900,
                 settings: {
                     // variableWidth: false,
                     slidesToShow: 3,
@@ -244,7 +244,24 @@ $(document).ready(function () {
 
     /** форма в модальном окне **/
 
-    sendMailFormButton.on('click', function () {
+    //sendMailFormButton.on('click', function () {
+    $('.a-form__submit.feedback').on('click', function () {
+        console.log('send mail');
+        var fd = new FormData($(this).parents('form:first')[0]);
+        console.log(fd);
+        fd.append("label", "WEBUPLOAD");
+        $.ajax({
+            url: "/feedback/send",
+            type: "POST",
+            data: fd,
+            processData: false,  // tell jQuery not to process the data
+            contentType: false   // tell jQuery not to set contentType
+        }).done(function( data ) {
+            console.log("PHP Output:");
+            console.log( data );
+        });
+
+
         sendMailFormTitle.text('Спасибо, ваш запрос отправлен!')
         sendMailFormDescription.text('Мы вам перезвоним или напишем, как только сможем!')
         sendMailForm.css('display', 'none')
