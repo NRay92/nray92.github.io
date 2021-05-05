@@ -19,6 +19,9 @@ $(document).ready(function () {
     //         }
     //     }
     // });
+    $('.search__field').on('focus', function () {
+        $(this).parent().addClass('focused')
+    });
 
     $('.a-form__tab').on('click', function(){
         let parent = $(this).closest('.a-form');
@@ -96,6 +99,11 @@ $(document).ready(function () {
             sendMailFormDescription.text(sendMailFormDescriptionContent)
             sendMailForm.css('display', 'block')
             $('.a-modal__button-close').css('display', 'block')
+        }
+
+        var search = $('.search');
+        if (search.has(e.target).length === 0) {
+            search.removeClass('focused');
         }
     });
 
